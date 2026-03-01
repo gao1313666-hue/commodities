@@ -2,15 +2,15 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>CGHT Capital | International Trading</title>
+<title>CGHT Capital</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
 <style>
 
 body{
 margin:0;
-font-family: Arial, Helvetica, sans-serif;
-background:#f5f5f5;
+font-family:"Segoe UI", Arial, sans-serif;
+background:#f6f6f6;
 color:#222;
 }
 
@@ -21,35 +21,42 @@ background:white;
 padding:25px 8%;
 display:flex;
 justify-content:space-between;
-align-items:center;
 border-bottom:1px solid #eee;
 }
 
-/* Brand Logo Style */
+/* Brand Header */
 
-.logo{
-font-size:42px;
-font-weight:800;
-letter-spacing:3px;
-color:#0f172a;
-}
-
-/* Hero Section */
-
-.hero{
+.brand{
+text-align:center;
+padding:170px 8%;
 background:
 linear-gradient(rgba(0,0,0,.65),rgba(0,0,0,.65)),
 url("https://images.unsplash.com/photo-1494412519320-aa613dfb7738");
 background-size:cover;
 color:white;
-padding:200px 8%;
-text-align:left;
 }
 
-.hero h1{
-font-size:64px;
+.brand h1{
+font-size:90px;
 font-weight:800;
-margin-bottom:20px;
+letter-spacing:10px;
+margin:0;
+}
+
+.brand p{
+font-size:24px;
+letter-spacing:4px;
+margin-top:20px;
+}
+
+/* Brand Section Titles */
+
+.brand-title{
+font-size:48px;
+font-weight:800;
+letter-spacing:3px;
+color:#0f172a;
+margin-bottom:40px;
 }
 
 /* Sections */
@@ -60,14 +67,7 @@ background:white;
 margin-bottom:15px;
 }
 
-h2{
-border-left:5px solid #0f172a;
-padding-left:18px;
-margin-bottom:40px;
-font-size:32px;
-}
-
-/* Grid */
+/* Grid Cards */
 
 .grid{
 display:grid;
@@ -82,16 +82,23 @@ border-radius:12px;
 border:1px solid #eee;
 }
 
-/* Button */
+/* Contact */
 
-.button{
-display:inline-block;
+input,textarea{
+width:100%;
+padding:14px;
+margin-top:12px;
+border:1px solid #ddd;
+border-radius:6px;
+}
+
+button{
+margin-top:20px;
 padding:15px 35px;
 background:#0f172a;
 color:white;
-text-decoration:none;
+border:none;
 border-radius:8px;
-margin-top:30px;
 font-weight:bold;
 }
 
@@ -100,7 +107,6 @@ background:#0f172a;
 color:#ccc;
 text-align:center;
 padding:45px;
-font-size:13px;
 }
 
 </style>
@@ -109,28 +115,21 @@ font-size:13px;
 <body>
 
 <nav>
-<div class="logo">CGHT</div>
-
-<div>
-<a href="#about">About</a>
-<a href="#products">Products</a>
-<a href="#contact">Contact</a>
-</div>
+<div style="font-weight:700;font-size:22px;">CGHT Capital</div>
 </nav>
 
-<div class="hero">
-<h1>CGHT Capital S.L.</h1>
-<p>International Commodity Trading | Compliance Driven Trade | European Registered Company</p>
-
-<a class="button" href="#contact">Contact Us</a>
+<div class="brand">
+<h1>CGHT</h1>
+<p>Commodity Trading Company</p>
 </div>
 
 <section id="about">
 
-<h2>About CGHT Capital</h2>
+<div class="brand-title">About</div>
 
 <p>
-CGHT Capital is a Spanish registered international commodity trading company based in Madrid, operating as a principal trading entity connecting European and global supply markets.
+CGHT Capital S.L. is a Spain registered international commodity trading company based in Madrid.
+We operate as a principal trading entity connecting European and global commodity markets.
 </p>
 
 <div class="grid">
@@ -143,14 +142,8 @@ Corporate Trading Structure
 
 <div class="card">
 Compliance Driven Trade  
-Long Term Supply Contracts  
-Structured Commercial Trading
-</div>
-
-<div class="card">
-Cross Border Trading Network  
-Professional Trade Operations  
-Commercial Partnership Model
+KYC Verification Process  
+International Commercial Trade
 </div>
 
 </div>
@@ -159,29 +152,21 @@ Commercial Partnership Model
 
 <section id="products">
 
-<h2>Trading Products</h2>
+<div class="brand-title">Products</div>
 
 <div class="grid">
 
 <div class="card">
 <h3>Chicken Paws</h3>
-Origin: Brazil<br>
-Grade: A<br>
-Supply: 200 FCL / Month
+Origin: Brazil  
+Grade: A  
+200 FCL / Month
 </div>
 
 <div class="card">
 <h3>Sugar</h3>
-Commodity Grade Sugar<br>
-Bulk Supply Trading<br>
-International Distribution
-</div>
-
-<div class="card">
-<h3>Other Commodities</h3>
-Agricultural Products<br>
-Industrial Trading Goods<br>
-Energy Related Components
+Bulk commodity sugar  
+Long term contract supply
 </div>
 
 </div>
@@ -190,19 +175,30 @@ Energy Related Components
 
 <section id="contact">
 
-<h2>Contact Us</h2>
+<div class="brand-title">Contact</div>
+
+<div class="card">
+
+<p>
+📍 Calle Hermosilla 48, Madrid, Spain
+</p>
+
+<p>
+📧 felix.h@cghtcapital.com  
+📧 chang.g@cghtcapital.com
+</p>
 
 <form>
 
-<input type="text" placeholder="Your Name" required style="width:100%;padding:14px;margin-bottom:15px;border:1px solid #ddd;border-radius:6px;">
+<input type="text" placeholder="Your Name">
+<input type="email" placeholder="Your Email">
+<textarea placeholder="Message" rows="6"></textarea>
 
-<input type="email" placeholder="Your Email" required style="width:100%;padding:14px;margin-bottom:15px;border:1px solid #ddd;border-radius:6px;">
-
-<textarea placeholder="Message" style="width:100%;padding:14px;height:140px;border:1px solid #ddd;border-radius:6px;"></textarea>
-
-<button class="button" type="submit">Send Message</button>
+<button>Send Message</button>
 
 </form>
+
+</div>
 
 </section>
 
