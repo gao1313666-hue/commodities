@@ -8,345 +8,183 @@
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;800&family=Montserrat:wght@300;500;700&display=swap" rel="stylesheet">
 
 <style>
+body{margin:0;font-family:'Montserrat',sans-serif;background:#f8f8f8;color:#222;}
+nav{background:white;padding:20px 8%;display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid #ddd;}
+nav a{color:#222;text-decoration:none;margin-left:25px;font-weight:500;font-size:15px;}
 
-body{
-margin:0;
-font-family: 'Montserrat', sans-serif;
-background:#f8f8f8;
-color:#222;
-}
+/* Dropdown */
+.dropdown{position:relative;display:inline-block;}
+.dropdown-content{display:none;position:absolute;background:white;min-width:230px;box-shadow:0 8px 16px rgba(0,0,0,0.1);padding:10px 0;z-index:1;}
+.dropdown-content a{display:block;padding:10px 20px;margin:0;}
+.dropdown:hover .dropdown-content{display:block;}
 
-/* NAVIGATION */
-nav{
-background:white;
-padding:20px 8%;
-display:flex;
-justify-content:space-between;
-align-items:center;
-border-bottom:1px solid #ddd;
-}
-
-nav a{
-color:#222;
-text-decoration:none;
-margin-left:25px;
-font-weight:500;
-font-size:15px;
-}
-
-/* BRAND HERO */
-.hero{
-text-align:center;
-padding:220px 8%;
-background:
-linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55)),
+.hero{text-align:center;padding:220px 8%;
+background:linear-gradient(rgba(0,0,0,0.55),rgba(0,0,0,0.55)),
 url("https://images.pexels.com/photos/443446/pexels-photo-443446.jpeg");
-background-size:cover;
-background-position:center;
-color:white;
-}
+background-size:cover;background-position:center;color:white;}
+.hero h1{font-family:'Playfair Display',serif;font-size:112px;font-weight:800;letter-spacing:10px;margin:0;}
+.hero p{font-family:'Playfair Display',serif;font-size:24px;margin-top:12px;letter-spacing:3px;}
 
-.hero h1{
-font-family:'Playfair Display', serif;
-font-size:112px;
-font-weight:800;
-letter-spacing:10px;
-margin:0;
-}
+.section-title{font-family:'Playfair Display',serif;font-size:44px;font-weight:700;color:#0f172a;margin-bottom:30px;border-left:6px solid #0f172a;padding-left:18px;}
+section{padding:90px 8%;background:white;margin-bottom:15px;}
+p,li{font-size:15px;line-height:1.7;}
+.product-img{width:100%;max-width:600px;margin:25px 0;border-radius:10px;}
 
-.hero p{
-font-family:'Playfair Display', serif;
-font-size:24px;
-margin-top:12px;
-letter-spacing:3px;
-}
-
-.hero .cta{
-display:inline-block;
-margin-top:30px;
-padding:14px 36px;
-background:#0f172a;
-color:white;
-text-decoration:none;
-border-radius:8px;
-font-weight:700;
-font-size:16px;
-}
-
-/* SECTION TITLES */
-.section-title{
-font-family:'Playfair Display', serif;
-font-size:44px;
-font-weight:700;
-color:#0f172a;
-margin-bottom:30px;
-border-left:6px solid #0f172a;
-padding-left:18px;
-}
-
-/* SECTIONS */
-section{
-padding:90px 8%;
-background:white;
-margin-bottom:15px;
-}
-
-p{
-font-size:16px;
-line-height:1.65;
-}
-
-/* PRODUCT GRID */
-.product-grid{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
-gap:28px;
-}
-
-.product-card{
-background:#fff;
-border-radius:12px;
-border:1px solid #eee;
-overflow:hidden;
-box-shadow:0 3px 12px rgba(0,0,0,0.08);
-}
-
-.product-card img{
-width:100%;
-height:190px;
-object-fit:cover;
-}
-
-.product-card h3{
-margin:15px 18px 10px 18px;
-font-size:20px;
-font-weight:700;
-color:#0f172a;
-}
-
-.product-card p{
-margin:0 18px 15px 18px;
-font-size:15px;
-}
-
-/* SERVICES GRID */
-.services-grid{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
-gap:28px;
-}
-
-.service-card{
-background:#fff;
-padding:22px;
-border-radius:10px;
-border:1px solid #eee;
-font-size:15px;
-line-height:1.6;
-}
-
-/* CONTACT FORM */
-input,textarea{
-width:100%;
-padding:14px;
-margin-top:12px;
-border:1px solid #ccc;
-border-radius:6px;
-font-size:15px;
-}
-
-button{
-margin-top:20px;
-padding:14px 32px;
-background:#0f172a;
-color:white;
-border:none;
-border-radius:8px;
-font-weight:700;
-cursor:pointer;
-font-size:15px;
-}
-
-.footer{
-background:#0f172a;
-color:#ccc;
-text-align:center;
-padding:35px;
-font-size:13px;
-}
-
+.footer{background:#0f172a;color:#ccc;text-align:center;padding:35px;font-size:13px;}
 </style>
 </head>
 
 <body>
 
-<!-- NAVIGATION -->
 <nav>
 <div style="font-weight:700;font-size:22px;">CGHT Capital</div>
 <div>
 <a href="#">Home</a>
 <a href="#about">About Us</a>
 <a href="#services">Services</a>
-<a href="#products">Products</a>
+
+<div class="dropdown">
+<a href="#">Commodities</a>
+<div class="dropdown-content">
+<a href="#paws">Chicken Paws</a>
+<a href="#feet">Chicken Feet</a>
+<a href="#sugar">White Sugar</a>
+<a href="#beef">Beef</a>
+<a href="#rice">Rice</a>
+<a href="#pork">Pork Trotters</a>
+<a href="#oil">Crude Oil</a>
+<a href="#soy">Soybeans</a>
+<a href="#other">Other Products</a>
+</div>
+</div>
+
 <a href="#contact">Contact</a>
 </div>
 </nav>
 
-<!-- HERO -->
 <div class="hero">
 <h1>CGHT</h1>
 <p>Commodity Trading Company</p>
-<a class="cta" href="#contact">Get in Touch</a>
 </div>
 
-<!-- ABOUT -->
-<section id="about">
-<div class="section-title">About Us</div>
+<!-- Chicken Paws -->
+<section id="paws">
+<div class="section-title">Frozen Chicken Paws (凤爪)</div>
+<img class="product-img" src="https://images.pexels.com/photos/130769/pexels-photo-130769.jpeg">
+<ul>
+<li>Grade A · Halal Certified</li>
+<li>Weight: 35g-45g</li>
+<li>Blasted at -40°C · Storage -18°C</li>
+<li>No blood · No bruises · No feathers</li>
+<li>Broken bones under 3% · Moisture < 1%</li>
+<li>Shelf Life: 12 Months</li>
+<li>MOQ: 135 MT (5 x 40ft Container)</li>
+<li>Frozen in Block Form · No Water Retention</li>
+</ul>
+</section>
+
+<!-- Chicken Feet -->
+<section id="feet">
+<div class="section-title">Frozen Chicken Feet (鸡爪)</div>
+<img class="product-img" src="https://images.pexels.com/photos/130769/pexels-photo-130769.jpeg">
+<ul>
+<li>Weight: 35g-55g</li>
+<li>Grade A · Halal</li>
+<li>IQF Processing</li>
+<li>Broken bones under 3%</li>
+<li>Moisture < 1%</li>
+<li>Shelf Life: 12 Months</li>
+<li>MOQ: 135 MT</li>
+</ul>
+</section>
+
+<!-- Sugar -->
+<section id="sugar">
+<div class="section-title">ICUMSA 45 White Sugar</div>
+<img class="product-img" src="https://images.pexels.com/photos/461198/pexels-photo-461198.jpeg">
+<ul>
+<li>Icumsa: 45 RBU</li>
+<li>Polarization: 99.80% Min</li>
+<li>Moisture: 0.04% Max</li>
+<li>Ash: 0.04% Max</li>
+<li>100% Free Flowing · Fine Granulation</li>
+<li>Color: Sparkling White</li>
+</ul>
+</section>
+
+<!-- Beef -->
+<section id="beef">
+<div class="section-title">Prime Angus Beef</div>
+<img class="product-img" src="https://images.pexels.com/photos/675951/pexels-photo-675951.jpeg">
+<ul>
+<li>Grade: Prime · Breed: Angus</li>
+<li>Style: Fresh / Frozen</li>
+<li>IQF & BQF</li>
+<li>HACCP · Halal · ISO</li>
+<li>40FCL ≈ 27 MT ±2%</li>
+</ul>
+</section>
+
+<!-- Rice -->
+<section id="rice">
+<div class="section-title">White & Parboiled Rice</div>
+<img class="product-img" src="https://images.pexels.com/photos/357514/pexels-photo-357514.jpeg">
+<ul>
+<li>Long Grain · Moisture Max 14%</li>
+<li>Fraction < 5%</li>
+<li>Packaging: 1kg–50kg Bags</li>
+<li>Main Regions: Brazil (Rio Grande do Sul, SC)</li>
+</ul>
+</section>
+
+<!-- Pork -->
+<section id="pork">
+<div class="section-title">Pork Trotters</div>
+<img class="product-img" src="https://images.pexels.com/photos/5908093/pexels-photo-5908093.jpeg">
+<ul>
+<li>Front / Hind Feet</li>
+<li>IQF & BQF</li>
+<li>Packaging: 10kg–20kg Carton</li>
+<li>HACCP · ISO</li>
+<li>40FCL ≈ 27 MT ±2%</li>
+</ul>
+</section>
+
+<!-- Oil -->
+<section id="oil">
+<div class="section-title">Crude Oil</div>
+<img class="product-img" src="https://images.pexels.com/photos/4115893/pexels-photo-4115893.jpeg">
+<ul>
+<li>API Gravity Range 10–50+</li>
+<li>Sulfur Content Controlled</li>
+<li>Distillation Range Optimized</li>
+<li>Water & Sediment Controlled</li>
+</ul>
+</section>
+
+<!-- Soy -->
+<section id="soy">
+<div class="section-title">HPS Soybeans</div>
+<img class="product-img" src="https://images.pexels.com/photos/616401/pexels-photo-616401.jpeg">
+<ul>
+<li>Protein: 39% Min · Oil: 18% Min</li>
+<li>Moisture: 16% Max</li>
+<li>Admixture: 0.1% Max</li>
+<li>Shelf Life: 2 Years</li>
+</ul>
+</section>
+
+<!-- Other -->
+<section id="other">
+<div class="section-title">Other Commodities</div>
+<img class="product-img" src="https://images.pexels.com/photos/396551/pexels-photo-396551.jpeg">
 <p>
-CGHT Capital S.L. is a European commodity trading group headquartered in Madrid, Spain.  
-We specialize in structured bulk commodity trading across continents, integrating supply chain execution, compliance frameworks, and long-term partnership models to support sustainable commercial operations.  
-</p>
-<p>
-Our comprehensive trading strategy includes principal trading, inventory supported execution, and back-to-back trading, while maintaining commercial transparency and regulatory alignment in European and global markets.
+CGHT Capital continues to expand into additional agricultural, energy,
+and industrial raw material markets through strategic supplier development
+and long-term structured trade agreements.
 </p>
 </section>
 
-<!-- SERVICES -->
-<section id="services">
-<div class="section-title">Services</div>
-<div class="services-grid">
-
-<div class="service-card">
-<h3>Commodity Trade Intermediation</h3>
-<p>
-Facilitating buyer-supplier trade communication across Brazil, Europe, and North America.  
-Supporting compliance with international trade standards and commercial execution efficiency.
-</p>
-</div>
-
-<div class="service-card">
-<h3>International Trade Advisory</h3>
-<p>
-Professional advisory on global trade regulations, import/export procedures, tariff policies, and market entry requirements.
-</p>
-</div>
-
-<div class="service-card">
-<h3>Logistics & Supply Chain Coordination</h3>
-<p>
-Optimization of transport routes, documentation support, freight coordination, and customs clearance facilitation.
-</p>
-</div>
-
-<div class="service-card">
-<h3>Contract & Negotiation Support</h3>
-<p>
-Drafting and negotiating commercial contracts while securing favorable trade conditions and mitigating risk.
-</p>
-</div>
-
-<div class="service-card">
-<h3>Market Analysis & Price Monitoring</h3>
-<p>
-Ongoing market trend analysis, supply-demand dynamics tracking, and global economic factors monitoring to inform trade decisions.
-</p>
-</div>
-
-<div class="service-card">
-<h3>Risk Management Solutions</h3>
-<p>
-Advisory on hedging strategies, price exposure management, and trade risk mitigation for more stable operations.
-</p>
-</div>
-
-</div>
-</section>
-
-<!-- PRODUCTS -->
-<section id="products">
-<div class="section-title">Products</div>
-<div class="product-grid">
-
-<div class="product-card">
-<img src="https://images.pexels.com/photos/8969234/pexels-photo-8969234.jpeg">
-<h3>Beef</h3>
-<p>Raw Beef Commodity Supply</p>
-</div>
-
-<div class="product-card">
-<img src="https://images.pexels.com/photos/5908093/pexels-photo-5908093.jpeg">
-<h3>Pork</h3>
-<p>Raw Pork Commodity Trading</p>
-</div>
-
-<div class="product-card">
-<img src="https://images.pexels.com/photos/130769/pexels-photo-130769.jpeg">
-<h3>Chicken Paws</h3>
-<p>Cold Chain Raw Commodity Supply</p>
-</div>
-
-<div class="product-card">
-<img src="https://images.pexels.com/photos/4110250/pexels-photo-4110250.jpeg">
-<h3>Rice</h3>
-<p>White Raw Rice Commodity</p>
-</div>
-
-<div class="product-card">
-<img src="https://images.pexels.com/photos/459529/pexels-photo-459529.jpeg">
-<h3>Sugar</h3>
-<p>White Granulated Sugar</p>
-</div>
-
-<div class="product-card">
-<img src="https://images.pexels.com/photos/616401/pexels-photo-616401.jpeg">
-<h3>Soybeans</h3>
-<p>Agricultural Bulk Commodity</p>
-</div>
-
-<div class="product-card">
-<img src="https://images.pexels.com/photos/39396/olive-oil-oil-olive-green-39396.jpeg">
-<h3>Oil</h3>
-<p>Olive Oil in Glass Bottle</p>
-</div>
-
-<div class="product-card">
-<img src="https://images.pexels.com/photos/4115893/pexels-photo-4115893.jpeg">
-<h3>Energy Products</h3>
-<p>Industrial Energy Commodity</p>
-</div>
-
-</div>
-</section>
-
-<!-- CONTACT -->
-<section id="contact">
-<div class="section-title">Contact</div>
-<div class="card">
-
-<p>
-📍 Calle Hermosilla 48, 1º Dcha<br>
-28001 Madrid, Spain
-</p>
-
-<p>
-📧 felix.h@cghtcapital.com<br>
-📧 chang.g@cghtcapital.com
-</p>
-
-<form>
-
-<input type="text" placeholder="Your Name">
-<input type="email" placeholder="Your Email">
-<textarea placeholder="Your Message" rows="6"></textarea>
-
-<button>Send Message</button>
-
-</form>
-
-</div>
-</section>
-
-<!-- FOOTER -->
 <div class="footer">
 © 2026 CGHT Capital S.L.
 </div>
