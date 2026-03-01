@@ -2,26 +2,28 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>CGHT Capital</title>
+<title>CGHT Capital | European Commodities Group</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
+
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;800&family=Montserrat:wght@300;500;700&display=swap" rel="stylesheet">
 
 <style>
 
 body{
 margin:0;
-font-family:"Segoe UI", Arial, sans-serif;
-background:#f6f6f6;
+font-family: 'Montserrat', sans-serif;
+background:#f8f8f8;
 color:#222;
 }
 
-/* Navigation */
-
+/* NAVIGATION */
 nav{
 background:white;
-padding:22px 8%;
+padding:20px 8%;
 display:flex;
 justify-content:space-between;
-border-bottom:1px solid #eee;
+align-items:center;
+border-bottom:1px solid #ddd;
 }
 
 nav a{
@@ -29,94 +31,148 @@ color:#222;
 text-decoration:none;
 margin-left:25px;
 font-weight:500;
+font-size:15px;
 }
 
-/* Brand Banner */
-
-.brand{
+/* BRAND HERO */
+.hero{
 text-align:center;
-padding:190px 8%;
+padding:220px 8%;
 background:
-linear-gradient(rgba(0,0,0,.65),rgba(0,0,0,.65)),
-url("https://images.unsplash.com/photo-1494412519320-aa613dfb7738");
+linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55)),
+url("https://images.pexels.com/photos/443446/pexels-photo-443446.jpeg");
 background-size:cover;
+background-position:center;
 color:white;
 }
 
-.brand h1{
-font-size:110px;
+.hero h1{
+font-family:'Playfair Display', serif;
+font-size:112px;
 font-weight:800;
-letter-spacing:14px;
+letter-spacing:10px;
 margin:0;
 }
 
-.brand p{
+.hero p{
+font-family:'Playfair Display', serif;
 font-size:24px;
-letter-spacing:5px;
-margin-top:25px;
-}
-
-/* Section Titles */
-
-.section-title{
-font-size:48px;
-font-weight:800;
+margin-top:12px;
 letter-spacing:3px;
-color:#0f172a;
-margin-bottom:40px;
-border-left:5px solid #0f172a;
-padding-left:20px;
 }
 
-/* Sections */
+.hero .cta{
+display:inline-block;
+margin-top:30px;
+padding:14px 36px;
+background:#0f172a;
+color:white;
+text-decoration:none;
+border-radius:8px;
+font-weight:700;
+font-size:16px;
+}
 
+/* SECTION TITLES */
+.section-title{
+font-family:'Playfair Display', serif;
+font-size:44px;
+font-weight:700;
+color:#0f172a;
+margin-bottom:30px;
+border-left:6px solid #0f172a;
+padding-left:18px;
+}
+
+/* SECTIONS */
 section{
 padding:90px 8%;
 background:white;
 margin-bottom:15px;
 }
 
-/* Grid */
+p{
+font-size:16px;
+line-height:1.65;
+}
 
-.grid{
+/* PRODUCT GRID */
+.product-grid{
 display:grid;
 grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
-gap:30px;
+gap:28px;
 }
 
-.card{
-background:#fafafa;
-padding:30px;
+.product-card{
+background:#fff;
 border-radius:12px;
 border:1px solid #eee;
+overflow:hidden;
+box-shadow:0 3px 12px rgba(0,0,0,0.08);
 }
 
-/* Contact */
+.product-card img{
+width:100%;
+height:190px;
+object-fit:cover;
+}
 
+.product-card h3{
+margin:15px 18px 10px 18px;
+font-size:20px;
+font-weight:700;
+color:#0f172a;
+}
+
+.product-card p{
+margin:0 18px 15px 18px;
+font-size:15px;
+}
+
+/* SERVICES GRID */
+.services-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+gap:28px;
+}
+
+.service-card{
+background:#fff;
+padding:22px;
+border-radius:10px;
+border:1px solid #eee;
+font-size:15px;
+line-height:1.6;
+}
+
+/* CONTACT FORM */
 input,textarea{
 width:100%;
 padding:14px;
 margin-top:12px;
-border:1px solid #ddd;
+border:1px solid #ccc;
 border-radius:6px;
+font-size:15px;
 }
 
 button{
 margin-top:20px;
-padding:15px 35px;
+padding:14px 32px;
 background:#0f172a;
 color:white;
 border:none;
 border-radius:8px;
-font-weight:bold;
+font-weight:700;
 cursor:pointer;
+font-size:15px;
 }
 
 .footer{
 background:#0f172a;
 color:#ccc;
 text-align:center;
-padding:45px;
+padding:35px;
+font-size:13px;
 }
 
 </style>
@@ -124,114 +180,167 @@ padding:45px;
 
 <body>
 
+<!-- NAVIGATION -->
 <nav>
 <div style="font-weight:700;font-size:22px;">CGHT Capital</div>
-
 <div>
 <a href="#">Home</a>
-<a href="#about">Quiénes somos</a>
-<a href="#products">Servicios</a>
-<a href="#news">Noticias</a>
-<a href="#contact">Contáctenos</a>
+<a href="#about">About Us</a>
+<a href="#services">Services</a>
+<a href="#products">Products</a>
+<a href="#contact">Contact</a>
 </div>
 </nav>
 
-<div class="brand">
+<!-- HERO -->
+<div class="hero">
 <h1>CGHT</h1>
 <p>Commodity Trading Company</p>
+<a class="cta" href="#contact">Get in Touch</a>
 </div>
 
+<!-- ABOUT -->
 <section id="about">
-
-<div class="section-title">Quiénes somos</div>
-
+<div class="section-title">About Us</div>
 <p>
-CGHT Capital S.L. is a Spanish registered international commodity trading company based in Madrid.
-
-We operate as a principal trading entity connecting European and global commodity markets through structured commercial trade operations.
+CGHT Capital S.L. is a European commodity trading group headquartered in Madrid, Spain.  
+We specialize in structured bulk commodity trading across continents, integrating supply chain execution, compliance frameworks, and long-term partnership models to support sustainable commercial operations.  
 </p>
-
+<p>
+Our comprehensive trading strategy includes principal trading, inventory supported execution, and back-to-back trading, while maintaining commercial transparency and regulatory alignment in European and global markets.
+</p>
 </section>
 
+<!-- SERVICES -->
+<section id="services">
+<div class="section-title">Services</div>
+<div class="services-grid">
+
+<div class="service-card">
+<h3>Commodity Trade Intermediation</h3>
+<p>
+Facilitating buyer-supplier trade communication across Brazil, Europe, and North America.  
+Supporting compliance with international trade standards and commercial execution efficiency.
+</p>
+</div>
+
+<div class="service-card">
+<h3>International Trade Advisory</h3>
+<p>
+Professional advisory on global trade regulations, import/export procedures, tariff policies, and market entry requirements.
+</p>
+</div>
+
+<div class="service-card">
+<h3>Logistics & Supply Chain Coordination</h3>
+<p>
+Optimization of transport routes, documentation support, freight coordination, and customs clearance facilitation.
+</p>
+</div>
+
+<div class="service-card">
+<h3>Contract & Negotiation Support</h3>
+<p>
+Drafting and negotiating commercial contracts while securing favorable trade conditions and mitigating risk.
+</p>
+</div>
+
+<div class="service-card">
+<h3>Market Analysis & Price Monitoring</h3>
+<p>
+Ongoing market trend analysis, supply-demand dynamics tracking, and global economic factors monitoring to inform trade decisions.
+</p>
+</div>
+
+<div class="service-card">
+<h3>Risk Management Solutions</h3>
+<p>
+Advisory on hedging strategies, price exposure management, and trade risk mitigation for more stable operations.
+</p>
+</div>
+
+</div>
+</section>
+
+<!-- PRODUCTS -->
 <section id="products">
+<div class="section-title">Products</div>
+<div class="product-grid">
 
-<div class="section-title">Servicios & Productos</div>
-
-<div class="grid">
-
-<div class="card">
+<div class="product-card">
+<img src="https://images.pexels.com/photos/130769/pexels-photo-130769.jpeg">
 <h3>Chicken Paws</h3>
-Origin: Brazil  
-Grade: A  
-200 FCL Monthly Supply
+<p>Origin: Brazil · Grade A · 200 FCL Monthly Supply</p>
 </div>
 
-<div class="card">
+<div class="product-card">
+<img src="https://images.pexels.com/photos/461198/pexels-photo-461198.jpeg">
 <h3>Sugar</h3>
-Brazilian Sugar  
-International Bulk Trading
+<p>Bulk Sugar Trading · International Supply</p>
 </div>
 
-<div class="card">
+<div class="product-card">
+<img src="https://images.pexels.com/photos/357514/pexels-photo-357514.jpeg">
 <h3>Rice</h3>
-Asian Rice Supply  
-Wholesale Distribution
+<p>International Rice Distribution · Wholesale Supply</p>
 </div>
 
-<div class="card">
+<div class="product-card">
+<img src="https://images.pexels.com/photos/1640777/pexels-photo-1640777.jpeg">
 <h3>Edible Oil</h3>
-Palm / Vegetable Oil Trading
+<p>Palm & Vegetable Oil Trading</p>
 </div>
 
-<div class="card">
-<h3>Industrial Products</h3>
-Energy & Equipment Trading
+<div class="product-card">
+<img src="https://images.pexels.com/photos/675951/pexels-photo-675951.jpeg">
+<h3>Beef</h3>
+<p>International Beef Commodity Supply</p>
+</div>
+
+<div class="product-card">
+<img src="https://images.pexels.com/photos/461198/pexels-photo-461198.jpeg">
+<h3>Pork Trotters</h3>
+<p>Global Pork Trotter Trading</p>
+</div>
+
+<div class="product-card">
+<img src="https://images.pexels.com/photos/396551/pexels-photo-396551.jpeg">
+<h3>Other Commodities</h3>
+<p>Agricultural Goods · Industrial Materials</p>
 </div>
 
 </div>
-
 </section>
 
-<section id="news">
-
-<div class="section-title">Noticias</div>
-
-<div class="card">
-CGHT Capital continues expanding international commodity trading partnerships across global markets.
-</div>
-
-</section>
-
+<!-- CONTACT -->
 <section id="contact">
-
-<div class="section-title">Contáctenos</div>
-
+<div class="section-title">Contact</div>
 <div class="card">
 
 <p>
-📍 Calle Hermosilla 48, 1º Dcha  
+📍 Calle Hermosilla 48, 1º Dcha<br>
 28001 Madrid, Spain
 </p>
 
 <p>
-📧 felix.h@cghtcapital.com  
+📧 felix.h@cghtcapital.com<br>
 📧 chang.g@cghtcapital.com
 </p>
 
 <form>
 
-<input type="text" placeholder="Your Name" required>
-<input type="email" placeholder="Your Email" required>
-<textarea placeholder="Message" rows="6"></textarea>
+<input type="text" placeholder="Your Name">
+<input type="email" placeholder="Your Email">
+<textarea placeholder="Your Message" rows="6"></textarea>
 
-<button type="submit">Send Message</button>
+<button>Send Message</button>
 
 </form>
 
 </div>
-
 </section>
 
+<!-- FOOTER -->
 <div class="footer">
 © 2026 CGHT Capital S.L.
 </div>
