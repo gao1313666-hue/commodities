@@ -18,17 +18,24 @@ color:#222;
 
 nav{
 background:white;
-padding:25px 8%;
+padding:22px 8%;
 display:flex;
 justify-content:space-between;
 border-bottom:1px solid #eee;
 }
 
-/* Brand Header */
+nav a{
+color:#222;
+text-decoration:none;
+margin-left:25px;
+font-weight:500;
+}
+
+/* Brand Banner */
 
 .brand{
 text-align:center;
-padding:170px 8%;
+padding:190px 8%;
 background:
 linear-gradient(rgba(0,0,0,.65),rgba(0,0,0,.65)),
 url("https://images.unsplash.com/photo-1494412519320-aa613dfb7738");
@@ -37,26 +44,28 @@ color:white;
 }
 
 .brand h1{
-font-size:90px;
+font-size:110px;
 font-weight:800;
-letter-spacing:10px;
+letter-spacing:14px;
 margin:0;
 }
 
 .brand p{
 font-size:24px;
-letter-spacing:4px;
-margin-top:20px;
+letter-spacing:5px;
+margin-top:25px;
 }
 
-/* Brand Section Titles */
+/* Section Titles */
 
-.brand-title{
+.section-title{
 font-size:48px;
 font-weight:800;
 letter-spacing:3px;
 color:#0f172a;
 margin-bottom:40px;
+border-left:5px solid #0f172a;
+padding-left:20px;
 }
 
 /* Sections */
@@ -67,7 +76,7 @@ background:white;
 margin-bottom:15px;
 }
 
-/* Grid Cards */
+/* Grid */
 
 .grid{
 display:grid;
@@ -100,6 +109,7 @@ color:white;
 border:none;
 border-radius:8px;
 font-weight:bold;
+cursor:pointer;
 }
 
 .footer{
@@ -116,6 +126,14 @@ padding:45px;
 
 <nav>
 <div style="font-weight:700;font-size:22px;">CGHT Capital</div>
+
+<div>
+<a href="#">Home</a>
+<a href="#about">Quiénes somos</a>
+<a href="#products">Servicios</a>
+<a href="#news">Noticias</a>
+<a href="#contact">Contáctenos</a>
+</div>
 </nav>
 
 <div class="brand">
@@ -125,34 +143,19 @@ padding:45px;
 
 <section id="about">
 
-<div class="brand-title">About</div>
+<div class="section-title">Quiénes somos</div>
 
 <p>
-CGHT Capital S.L. is a Spain registered international commodity trading company based in Madrid.
-We operate as a principal trading entity connecting European and global commodity markets.
+CGHT Capital S.L. is a Spanish registered international commodity trading company based in Madrid.
+
+We operate as a principal trading entity connecting European and global commodity markets through structured commercial trade operations.
 </p>
-
-<div class="grid">
-
-<div class="card">
-European Registered Company  
-Madrid Headquarters  
-Corporate Trading Structure
-</div>
-
-<div class="card">
-Compliance Driven Trade  
-KYC Verification Process  
-International Commercial Trade
-</div>
-
-</div>
 
 </section>
 
 <section id="products">
 
-<div class="brand-title">Products</div>
+<div class="section-title">Servicios & Productos</div>
 
 <div class="grid">
 
@@ -160,27 +163,54 @@ International Commercial Trade
 <h3>Chicken Paws</h3>
 Origin: Brazil  
 Grade: A  
-200 FCL / Month
+200 FCL Monthly Supply
 </div>
 
 <div class="card">
 <h3>Sugar</h3>
-Bulk commodity sugar  
-Long term contract supply
+Brazilian Sugar  
+International Bulk Trading
+</div>
+
+<div class="card">
+<h3>Rice</h3>
+Asian Rice Supply  
+Wholesale Distribution
+</div>
+
+<div class="card">
+<h3>Edible Oil</h3>
+Palm / Vegetable Oil Trading
+</div>
+
+<div class="card">
+<h3>Industrial Products</h3>
+Energy & Equipment Trading
 </div>
 
 </div>
 
 </section>
 
+<section id="news">
+
+<div class="section-title">Noticias</div>
+
+<div class="card">
+CGHT Capital continues expanding international commodity trading partnerships across global markets.
+</div>
+
+</section>
+
 <section id="contact">
 
-<div class="brand-title">Contact</div>
+<div class="section-title">Contáctenos</div>
 
 <div class="card">
 
 <p>
-📍 Calle Hermosilla 48, Madrid, Spain
+📍 Calle Hermosilla 48, 1º Dcha  
+28001 Madrid, Spain
 </p>
 
 <p>
@@ -190,11 +220,11 @@ Long term contract supply
 
 <form>
 
-<input type="text" placeholder="Your Name">
-<input type="email" placeholder="Your Email">
+<input type="text" placeholder="Your Name" required>
+<input type="email" placeholder="Your Email" required>
 <textarea placeholder="Message" rows="6"></textarea>
 
-<button>Send Message</button>
+<button type="submit">Send Message</button>
 
 </form>
 
