@@ -8,6 +8,34 @@
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;800&family=Montserrat:wght@300;500;700&display=swap" rel="stylesheet">
 
 <style>
+  .dropdown{
+position:relative;
+display:inline-block;
+}
+
+.dropdown-content{
+display:none;
+position:absolute;
+background:white;
+min-width:220px;
+box-shadow:0 8px 20px rgba(0,0,0,0.1);
+z-index:999;
+}
+
+.dropdown-content a{
+display:block;
+padding:12px 18px;
+text-decoration:none;
+color:#222;
+}
+
+.dropdown-content a:hover{
+background:#f2f2f2;
+}
+
+.dropdown:hover .dropdown-content{
+display:block;
+}
 .dropdown{position:relative;display:inline-block;}
 
 .dropdown-content{
@@ -208,13 +236,31 @@ font-size:13px;
 <!-- NAVIGATION -->
 <nav>
 <div style="font-weight:700;font-size:22px;">CGHT Capital</div>
+
+<div class="dropdown">
+
+<a href="products.html">Products ▼</a>
+
+<div class="dropdown-content">
+
+<a href="products.html#paws">Frozen Chicken Paws</a>
+<a href="products.html#feet">Frozen Chicken Feet</a>
+<a href="products.html#rice">Rice</a>
+<a href="products.html#soy">Soybeans</a>
+<a href="products.html#oil">Crude Oil</a>
+<a href="products.html#diesel">EN590 Diesel</a>
+<a href="products.html#bitumen">Bitumen</a>
+
+</div>
+</div>
+
 <div>
 <a href="#">Home</a>
 <a href="#about">About Us</a>
 <a href="#services">Services</a>
-<a href="#products">Products</a>
 <a href="#contact">Contact</a>
 </div>
+
 </nav>
 
 <!-- HERO -->
@@ -285,32 +331,6 @@ Advisory on hedging strategies, price exposure management, and trade risk mitiga
 </div>
 
 </div>
-</section>
-
-  <!-- PRODUCTS -->
-<section id="products">
-
-<div class="section-title">Products</div>
-
-<div class="product-grid">
-
-<div class="product-card">
-<h3>Frozen Chicken Products</h3>
-<p>Chicken paws and chicken feet with international quality standards.</p>
-</div>
-
-<div class="product-card">
-<h3>Energy Products</h3>
-<p>Crude oil, diesel EN590, and petroleum commodities trading.</p>
-</div>
-
-<div class="product-card">
-<h3>Agricultural Products</h3>
-<p>Rice, soybeans, and global agricultural commodity sourcing.</p>
-</div>
-
-</div>
-
 </section>
   
 <!-- CONTACT -->
