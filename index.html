@@ -2,15 +2,15 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>CGHT Capital</title>
+<title>CGHT Capital | International Trading</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
 <style>
 
 body{
 margin:0;
-font-family:Arial, Helvetica, sans-serif;
-background:#f7f7f7;
+font-family: Arial, Helvetica, sans-serif;
+background:#f5f5f5;
 color:#222;
 }
 
@@ -18,13 +18,23 @@ color:#222;
 
 nav{
 background:white;
-padding:20px 8%;
+padding:25px 8%;
 display:flex;
 justify-content:space-between;
+align-items:center;
 border-bottom:1px solid #eee;
 }
 
-/* Hero */
+/* Brand Logo Style */
+
+.logo{
+font-size:42px;
+font-weight:800;
+letter-spacing:3px;
+color:#0f172a;
+}
+
+/* Hero Section */
 
 .hero{
 background:
@@ -32,66 +42,65 @@ linear-gradient(rgba(0,0,0,.65),rgba(0,0,0,.65)),
 url("https://images.unsplash.com/photo-1494412519320-aa613dfb7738");
 background-size:cover;
 color:white;
-padding:180px 8%;
+padding:200px 8%;
+text-align:left;
 }
 
 .hero h1{
-font-size:50px;
+font-size:64px;
+font-weight:800;
+margin-bottom:20px;
 }
 
 /* Sections */
 
 section{
-padding:80px 8%;
+padding:90px 8%;
 background:white;
 margin-bottom:15px;
 }
 
 h2{
-border-left:4px solid #0f172a;
-padding-left:15px;
+border-left:5px solid #0f172a;
+padding-left:18px;
+margin-bottom:40px;
+font-size:32px;
 }
 
 /* Grid */
 
 .grid{
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-gap:25px;
+grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+gap:30px;
 }
 
 .card{
 background:#fafafa;
-padding:25px;
-border-radius:8px;
+padding:30px;
+border-radius:12px;
 border:1px solid #eee;
 }
 
-/* Contact Form */
+/* Button */
 
-input,textarea{
-width:100%;
-padding:12px;
-margin-top:10px;
-border:1px solid #ddd;
-border-radius:6px;
-}
-
-button{
-margin-top:15px;
-padding:12px 30px;
+.button{
+display:inline-block;
+padding:15px 35px;
 background:#0f172a;
 color:white;
-border:none;
-border-radius:6px;
-cursor:pointer;
+text-decoration:none;
+border-radius:8px;
+margin-top:30px;
+font-weight:bold;
 }
 
 .footer{
 background:#0f172a;
 color:#ccc;
 text-align:center;
-padding:40px;
+padding:45px;
+font-size:13px;
 }
 
 </style>
@@ -100,7 +109,8 @@ padding:40px;
 <body>
 
 <nav>
-<div><strong>CGHT Capital</strong></div>
+<div class="logo">CGHT</div>
+
 <div>
 <a href="#about">About</a>
 <a href="#products">Products</a>
@@ -111,30 +121,36 @@ padding:40px;
 <div class="hero">
 <h1>CGHT Capital S.L.</h1>
 <p>International Commodity Trading | Compliance Driven Trade | European Registered Company</p>
+
+<a class="button" href="#contact">Contact Us</a>
 </div>
 
 <section id="about">
 
-<h2>Company Structure</h2>
+<h2>About CGHT Capital</h2>
+
+<p>
+CGHT Capital is a Spanish registered international commodity trading company based in Madrid, operating as a principal trading entity connecting European and global supply markets.
+</p>
 
 <div class="grid">
 
 <div class="card">
-Principal Trading Entity  
-Inventory Supported Trading  
-Back-to-Back Trade Structure
+European Registered Company  
+Madrid Headquarters  
+Corporate Trading Structure
 </div>
 
 <div class="card">
-KYC Compliance Structure  
-SGS / BV Inspection Support  
-International Trade Operations
+Compliance Driven Trade  
+Long Term Supply Contracts  
+Structured Commercial Trading
 </div>
 
 <div class="card">
-LC / DLC Trade Finance  
-SBLC Accepted Structure  
-Long Term Supply Contracts
+Cross Border Trading Network  
+Professional Trade Operations  
+Commercial Partnership Model
 </div>
 
 </div>
@@ -143,7 +159,7 @@ Long Term Supply Contracts
 
 <section id="products">
 
-<h2>Products</h2>
+<h2>Trading Products</h2>
 
 <div class="grid">
 
@@ -151,22 +167,21 @@ Long Term Supply Contracts
 <h3>Chicken Paws</h3>
 Origin: Brazil<br>
 Grade: A<br>
-Supply: 200 FCL / Month<br>
-Direct sourcing + Trading partners
+Supply: 200 FCL / Month
 </div>
 
 <div class="card">
 <h3>Sugar</h3>
 Commodity Grade Sugar<br>
-International Trading Supply<br>
-Bulk Contract Supply Supported
+Bulk Supply Trading<br>
+International Distribution
 </div>
 
 <div class="card">
-<h3>Other Products</h3>
-Commodity trading expansion<br>
-Energy equipment parts<br>
-Agricultural commodities
+<h3>Other Commodities</h3>
+Agricultural Products<br>
+Industrial Trading Goods<br>
+Energy Related Components
 </div>
 
 </div>
@@ -177,15 +192,15 @@ Agricultural commodities
 
 <h2>Contact Us</h2>
 
-<form action="mailto:felix.h@cghtcapital.com" method="post" enctype="text/plain">
+<form>
 
-<input type="text" placeholder="Your Name" required>
+<input type="text" placeholder="Your Name" required style="width:100%;padding:14px;margin-bottom:15px;border:1px solid #ddd;border-radius:6px;">
 
-<input type="email" placeholder="Your Email" required>
+<input type="email" placeholder="Your Email" required style="width:100%;padding:14px;margin-bottom:15px;border:1px solid #ddd;border-radius:6px;">
 
-<textarea placeholder="Your Message" rows="6"></textarea>
+<textarea placeholder="Message" style="width:100%;padding:14px;height:140px;border:1px solid #ddd;border-radius:6px;"></textarea>
 
-<button type="submit">Send Message</button>
+<button class="button" type="submit">Send Message</button>
 
 </form>
 
